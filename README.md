@@ -6,13 +6,20 @@ Flask practice notes <br/>
 * virtualenv-
 
                 pip3 install virtualenv
+
+* flask-
+
+                pip3 install flask flask-sqlalchemy
+
 <br/>
 
 ## Initial commands:
 * create a virtual environment-
+
                 virtualenv env
 
 * activate the environment-
+
                 source env/bin/activate
 
 <br/>
