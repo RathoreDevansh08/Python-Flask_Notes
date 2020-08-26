@@ -2,7 +2,8 @@
 Make sure to not call your application flask.py because this would conflict with Flask itself.
 '''
 
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
+from flask_sqlalchemy import SQLAlchemy #for database purposes
 #from wtf.app import app
 
 #First we imported the Flask class. An instance of this class will be our WSGI application.
@@ -14,6 +15,10 @@ If you are using a single module (as in this example), you should use __name__ b
 application or imported as module the name will be different ('__main__' versus the actual import name). This is needed
 so that Flask knows where to look for templates, static files, and so on.
 '''
+
+#it is to tell our app, where is our database is located
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'
+# 3x'/' for relative path, 4x'/' for absolute path
 
 # creating index route
 @app.route('/')
